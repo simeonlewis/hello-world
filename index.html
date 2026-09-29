@@ -11,12 +11,12 @@ header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0
 main{max-width:1100px;margin:26px auto 60px;padding:0 18px}.hero{margin-bottom:18px}.eyebrow{font-size:13px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.04em}h1{margin:4px 0 8px;font-size:30px}.pill{display:inline-block;background:#e9f0fb;color:#184884;padding:5px 9px;border-radius:999px;font-weight:700;font-size:12px;margin-right:6px}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;margin:16px 0;overflow:hidden;box-shadow:0 8px 24px rgba(20,32,56,.06)}.card h2{font-size:19px;margin:0;padding:16px 18px;border-bottom:1px solid var(--line)}.body{padding:18px}.note{background:#fff8e8;border:1px solid #efd28a;padding:12px 14px;border-radius:10px;margin-bottom:14px}
 .audio-wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.btn{border:0;border-radius:9px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--blue);color:#fff}.secondary{background:#fff;color:var(--blue);border:1px solid #aac3e7}.btn:disabled{opacity:.5;cursor:not-allowed}audio{width:100%;margin-top:12px}
-.score-frame{width:100%;height:700px;border:1px solid var(--line);border-radius:10px;background:#eee}.score-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.score-links a{color:var(--blue);font-weight:700;text-decoration:none}
+.score-frame{width:100%;height:720px;border:1px solid var(--line);border-radius:10px;background:#eee}.score-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.score-links a{color:var(--blue);font-weight:700;text-decoration:none}
 .q{padding:18px;border-top:1px solid var(--line)}.q:first-child{border-top:0}.qtitle{font-weight:800;margin-bottom:10px}.marks{float:right;color:var(--muted);font-size:13px}.options{display:grid;gap:8px;margin-top:8px}.options label{border:1px solid var(--line);border-radius:9px;padding:9px 10px;cursor:pointer}.options label:hover{background:#f7f9fc}
-input[type=text],textarea{width:100%;border:1px solid #bfc7d4;border-radius:8px;padding:10px;font:inherit}textarea{min-height:72px;resize:vertical}.short{max-width:280px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.answer-line{margin-top:8px}
+input[type=text],textarea{width:100%;border:1px solid #bfc7d4;border-radius:8px;padding:10px;font:inherit}textarea{min-height:72px;resize:vertical}.short{max-width:280px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
 .submit{padding:20px;border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap}.scorebox{font-size:24px;font-weight:900;color:var(--blue)}
 .feedback{display:none;margin:0 18px 18px;padding:14px;border-radius:10px;background:#f7f8fa;border:1px solid var(--line)}.feedback.show{display:block}.ok{color:var(--good);font-weight:800}.no{color:var(--bad);font-weight:800}.review{margin:8px 0;padding-left:18px}.review li{margin:5px 0}
-@media(max-width:760px){.row,.three{grid-template-columns:1fr}.score-frame{height:520px}h1{font-size:25px}}
+@media(max-width:760px){.row,.three{grid-template-columns:1fr}.score-frame{height:540px}h1{font-size:25px}}
 </style>
 </head>
 <body>
@@ -25,16 +25,16 @@ input[type=text],textarea{width:100%;border:1px solid #bfc7d4;border-radius:8px;
 <section class="hero"><div class="eyebrow">Component 3 • Appraising • Question 1</div><h1>J. S. Bach — Badinerie, Section A</h1><span class="pill">12 marks</span><span class="pill">2024 paper</span><span class="pill">Musical Forms & Devices</span></section>
 
 <section class="card"><h2>1. Listen to the extract</h2><div class="body">
-<div class="note"><strong>Practice version:</strong> replay as many times as you like. The recording below is a freely reusable performance of Badinerie, not Eduqas's restricted exam audio. Use the <strong>Play Section A</strong> button for the opening section.</div>
-<div class="audio-wrap"><button class="btn primary" id="playSection">▶ Play Section A</button><button class="btn secondary" id="restart">↺ Restart</button><span class="small" id="playCount">0 plays</span></div>
+<div class="note"><strong>Practice version:</strong> replay as many times as you like. The recording below is a freely reusable performance of Badinerie, not Eduqas's restricted exam audio. Use <strong>Play Section A</strong> for the opening section.</div>
+<div class="audio-wrap"><button class="btn primary" id="playSection">▶ Play Section A</button><button class="btn secondary" id="restart">↺ Play full piece from start</button><span class="small" id="playCount">0 plays</span></div>
 <audio id="audio" controls preload="metadata"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/9/97/Bach%2C_Johann_Sebastian_-_Suite_No.2_in_B_Minor_-_X._Badinerie.ogg/Bach%2C_Johann_Sebastian_-_Suite_No.2_in_B_Minor_-_X._Badinerie.ogg.mp3" type="audio/mpeg"><source src="https://upload.wikimedia.org/wikipedia/commons/9/97/Bach%2C_Johann_Sebastian_-_Suite_No.2_in_B_Minor_-_X._Badinerie.ogg" type="audio/ogg">Your browser does not support audio.</audio>
-<div class="small" style="margin-top:8px">This public-domain/CC0 performance lasts about 1:23. The practice button stops after approximately 34 seconds, around the end of Section A in this performance.</div>
+<div class="small" style="margin-top:8px">The recording lasts about 1:23. Play Section A stops after approximately 34 seconds in this performance.</div>
 </div></section>
 
 <section class="card"><h2>2. Use the score</h2><div class="body">
-<div class="note">This embeds the <strong>official Eduqas Badinerie score</strong>. You can scroll and zoom inside the PDF. Section A is at the beginning.</div>
-<iframe class="score-frame" src="https://resource.download.wjec.co.uk/vtc/2019-20/WJEC19-20_1-9/pdf/Bach%20Badinerie%20-%20Score.pdf#page=1&zoom=page-width" title="Official Eduqas Badinerie score"></iframe>
-<div class="score-links"><a target="_blank" rel="noopener" href="https://resource.download.wjec.co.uk/vtc/2019-20/WJEC19-20_1-9/pdf/Bach%20Badinerie%20-%20Score.pdf">Open score in a new tab</a><a target="_blank" rel="noopener" href="https://resources.eduqas.co.uk/Pages/ResourceSingle.aspx?rIid=1444">Eduqas Badinerie resources</a></div>
+<div class="note"><strong>Official Eduqas Badinerie score.</strong> The viewer below uses Google to display the public WJEC/Eduqas PDF because the WJEC server does not allow its PDF to be embedded directly on other sites.</div>
+<iframe class="score-frame" src="https://docs.google.com/gview?embedded=1&url=https%3A%2F%2Fresource.download.wjec.co.uk%2Fvtc%2F2019-20%2FWJEC19-20_1-9%2Fpdf%2FBach%20Badinerie%20-%20Score.pdf" title="Official Eduqas Badinerie score"></iframe>
+<div class="score-links"><a target="_blank" rel="noopener" href="https://resource.download.wjec.co.uk/vtc/2019-20/WJEC19-20_1-9/pdf/Bach%20Badinerie%20-%20Score.pdf">Open official score directly</a><a target="_blank" rel="noopener" href="https://resources.eduqas.co.uk/Pages/ResourceSingle.aspx?rIid=1444">Eduqas Badinerie resources</a></div>
 </div></section>
 
 <section class="card"><h2>3. Answer the 2024 questions</h2>
@@ -79,8 +79,7 @@ function markH(text){let v=norm(text);let concepts=[];
  if(hasAny(v,['ritard','rall','slows down','slower at the end'])) concepts.push('rit');
  if((v.includes('dominant minor')||v.includes('f# minor'))&&v.includes('tonic')&&hasAny(v,['modulate','moves','move'])) concepts.push('mod-to-tonic');
  return concepts[0]||''}
-function sequenceOK(v){v=norm(v).replace(/bars?/g,'').replace(/beat/g,'').replace(/\s/g,'').replace(/–|—/g,'-');
- return /6(\.2|2)?-(9(\.1|\.2|1|2)?|10(\.1|1)?)/.test(v)||/10(\.2|2)?-(11(\.2|2)?|12(\.1|1)?)/.test(v)}
+function sequenceOK(v){v=norm(v).replace(/bars?/g,'').replace(/beat/g,'').replace(/\s/g,'').replace(/–|—/g,'-');return /6(\.2|2)?-(9(\.1|\.2|1|2)?|10(\.1|1)?)/.test(v)||/10(\.2|2)?-(11(\.2|2)?|12(\.1|1)?)/.test(v)}
 function mark(){let s=0,items=[];function add(label,ok,answer){if(ok)s++;items.push('<li><span class="'+(ok?'ok':'no')+'">'+(ok?'✓':'✗')+'</span> '+label+(ok?'':' — '+answer)+'</li>')}
  add('(a)',radio('a')==='simple duple','Correct: Simple duple.');
  add('(b)',hasAny(document.getElementById('b').value,['allegro']),'Correct: Allegro.');
